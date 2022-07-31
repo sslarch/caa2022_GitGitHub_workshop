@@ -55,9 +55,21 @@ git
 
 ## Creating a git repository
 
+\small
+```bash
+mkdir myProject
+cd myProject
+```
+\normalsize
+
 ```bash
 git init
 ```
+
+**Initialize a directory to be managed by Git**
+
+- Creates a hidden `.git` directory, which Git uses to manage everything for this project
+- Actually we rarely start like this -- we rather create project on GitHub and clone that (see below)
 
 ## Git's status
 
@@ -65,12 +77,44 @@ git init
 git status
 ```
 
-## Logging progress: The staging area
+**Show the status of a project**
+
+- In a new project without any changes Git could detect, we get the following message:
+
+```
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+```
+
+- We're on the master branch
+- We haven't added any commits yet
+- There's nothing to commit, because we haven't made any changes yet
+
+This will change -- we will call `git status` frequently
+
+## Logging progress: Preparing changes
+
+\small
+```bash
+echo "This is a test file" > testfile.txt
+ls
+cat testfile.txt
+```
+\normalsize
 
 ```bash
-git add
-# git reset/checkout ?
+git add testfile.txt
 ```
+
+**Add files to the set of changes prepared for the next commit**
+
+Useful options:
+
+- `--all`: Add all changes to the staging area
+- `-f`: Force a file to be added that would otherwise be ignored (see below)
 
 ## Logging progress: The commit
 
@@ -89,6 +133,12 @@ git log
 ```bash
 git diff
 ```
+
+# The .gitignore file
+
+## Ignoring files
+
+## Unignoring files
 
 # Branches
 
