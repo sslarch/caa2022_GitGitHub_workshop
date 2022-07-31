@@ -1,4 +1,4 @@
-# Developing R Packages
+# How to navigate the coding archaeology world: An introduction to scientific co-creation using Git and Github
 
 This workshop by the [CAA–SIG Scientific Scripting Languages in Archaeology](https://sslarch.github.io) given at [CAA2022, Oxford](https://2022.caaconference.org) offers an introduction to version control and collaborative coding for archaeologists. The workshop was complementary to the session Workflows and Experiences on Collaborative Working and Community Building Using Digital Tools at the conference.
 
