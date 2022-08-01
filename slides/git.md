@@ -8,37 +8,147 @@ theme: "Singapore"
 
 ## The command line
 
+A text-based interface to control your computer
+
+- Born in the 70s to interact with mainframe systems
+- An efficient, direct way to interact with files and software
+- Command line software ideally engages in a dialogue with the user: https://clig.dev
+
+Each operating sytem offers different shells and terminal emulators
+
+- Linux shells: sh, bash, ksh, zsh, ...
+- Linux terminal emulators: XFCE/GNOME terminal, Konsole, alacritty, kitty, terminator, ...
+
+Windows users in this workshop should use the Git BASH, which simulates a \*nix environment
+
 ## Navigating
+
+**Show your current position relative to the root directory**
 
 ```bash
 pwd
-ls
-cd
 ```
 
-## Creating, editing and deleting files
+**Show the content of a directory**
 
 ```bash
-touch
-echo "test" > file.txt
-nano
-rm
+ls
+ls -l # long format output
+ls -h # file sizes in human readable format
+ls -a # also show hidden files
+```
+
+**Move to another position in the file system**
+
+```bash
+cd path/where/I/want/to/go
+cd / # move to the root directory 
+     # absolute paths start with `/`
+cd ~ # move to your home directory
+cd .. # move one level up to the parent directory
+```
+
+## Creating and editing files
+
+**Print text and forward it to a new file**
+
+```bash
+echo "test" # Print a value to the command line
+echo "test1" > file.txt # write text to a (new) file
+echo "test2" >> file.txt # append text to a file
+
+```
+
+**Edit a file with a minimal text editor**
+
+```bash
+nano file.txt
+```
+
+- `Ctrl`+ `x` to close nano
+- Cut & paste: `Ctrl` + `Shift` + `C` & `Ctrl` + `Shift` + `V`
+- There are more fancy command line text editors (emacs, vi)
+
+## Copying, moving and deleting files
+
+**Copy a file**
+
+```bash
+cp file1.txt file2.txt
+```
+
+**Move and/or rename a file**
+
+```bash
+mv file1.txt file2.txt
+```
+
+**Delete a file**
+
+```bash
+rm file2.txt
 ```
 
 ## Making and deleting directories
 
+**Create a directory**
+
+```bash
+mkdir myDir
 ```
-mkdir
+
+Copying and moving directories works just as for files with `cp` and `mv`
+
+**Delete a directory**
+
+```bash
 rm -r myDir
 ```
 
-## Running fancy command line tools
+The `-r` ("recursive") flag is necessary to delete a directory
 
-A dialogue with the computer
+## Looking up features
+
+The most important tools have extensive manuals
 
 ```bash
-# trident
-git
+man ls # man + name of the program
+```
+
+```
+NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List  information about the FILEs
+       (the current directory by default).
+       Sort entries alphabetically if none of
+       -cftuvSUX nor --sort is specified.
+...
+```
+
+## Modern command line tools
+
+Modern CLI tools are structured as a dialogue between you and the computer: You don't have to remember details
+
+```bash
+git # shows an overview of the important subcommands
+git commit -h # shows the options for one subcommand
+```
+
+```
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet       suppress summary after commit
+    -v, --verbose     show diff in commit message template
+
+Commit message options
+...
+    -m, --message <message>     commit message
+...
 ```
 
 # What is Git?
