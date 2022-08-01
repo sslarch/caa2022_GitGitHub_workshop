@@ -155,9 +155,69 @@ Commit message options
 
 ## The software
 
+- https://git-scm.com
+- A free and open source distributed version control system
+- Written by Linus Torvalds 2005 (an initial version in only 3 days!)
+- Developed since then, now v2.37.1
+- "Git" has no clear meaning: *Global information tracker*, *Goddamn idiotic truckload of sh\*t*
+
+Features:
+
+- Fast (logging changes almost instantly)
+- Robust (Almost never breaks, if used correctly)
+- Scales incredibly well (small to very large projects)
+- Is relatively easy to use and an almost universal standard
+
 ## Version control
 
-## Trees and networks
+::: columns
+
+:::: column
+Traditional version control
+
+- Many iterations of one file:
+  - Manuscript.doc
+  - Manuscript_revised.doc
+  - ...
+  - Manuscript_final35.doc
+  - ...
+- Collaboration hell:
+  - Sending the manuscript back and forth via email
+  - Manually merging contributions
+
+Google Docs etc. solved some of these problems for text. But what about data and code?
+::::
+
+:::: column
+Version control with Git
+
+- One iteration of said file:
+  - Manuscript.md
+  - an unintrusive log of iterative change
+  - the option to jump back to any previous version
+- Collaboration as a first-class citizen:
+  - decentralized data keeping and backup
+  - direct and fair documentation
+  - tools to resolve merge conflicts
+
+Git handles text, code and (small) datasets
+::::
+
+:::
+
+## Git: Mechanism and terminology
+
+Git maintains a hidden directory (`.git)` in your project directory, which documents the history and state of your project
+
+- When you edit a file, Git automatically detects the change
+- You then add the change to a **staging area** for logging
+- When you accumulated a meaningful set of changes, you log it as a **commit** with a descriptive message
+- Commits exist on **branches** of the "development tree" of your project
+- The main branch is called **master** or **main** and your and your collaborators work is centered around it
+
+## Git: An example
+
+
 
 ## Where and how to get help
 
