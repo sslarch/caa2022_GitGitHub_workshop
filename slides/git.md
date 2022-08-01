@@ -210,16 +210,33 @@ Git handles text, code and (small) datasets
 Git maintains a hidden directory (`.git)` in your project directory, which documents the history and state of your project
 
 - When you edit a file, Git automatically detects the change
-- You then add the change to a **staging area** for logging
+- You then **add** the change to a **staging area** for logging
 - When you accumulated a meaningful set of changes, you log it as a **commit** with a descriptive message
 - Commits exist on **branches** of the "development tree" of your project
 - The main branch is called **master** or **main** and your and your collaborators work is centered around it
+- The current state of a repository can be **pushed** to a **remote** server, from where it can also be **cloned** and **pulled**
 
 ## Git: An example
 
+- Alice has a project directory, where Git is activated
+- She writes an R script in a file `analysis.R`
+- She **adds** the file to the **staging area** and then **commits** it with the message: *first draft of my analysis*
+- Then she **pushes** the change to the **remote** on GitHub
+- Her colleague Bob **pulls** the change to his **clone** of the project
+- He applies changes to Alice's script, **commits**, and **pushes** again
+- Alice can again **pull** the latest version of the script to develop it further
 
+Below we will go through the details of the local portion of this workflow
 
 ## Where and how to get help
+
+Git's community is incredibly large and every reasonable (user) question is answered
+
+- Stackoverflow features thousands of questions regarding Git, many with excellent answers
+- The Git website has good documentation and tutorials (https://git-scm.com/doc)
+- The Git user group is the recommended place for beginners to ask questions: https://groups.google.com/g/git-users
+
+Git is not an obscure tool, but a central foundation of modern technology
 
 # Git in action
 
