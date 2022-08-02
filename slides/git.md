@@ -406,16 +406,33 @@ Instead of unignoring a file in the .gitignore file, we can also add it manually
 
 ## Creating a new branch
 
+Branches allow you, to explore something off the main track. This is useful for
+
+- Experiments and breaking changes
+- Collaborative work: Suggesting changes
+- Separate projects - e.g. GitHub pages (Dangerous!)
+
 ```bash
 git branch
 ```
 
+**List and create branches**
+
+- `git branch <branch name>` creates a new branch
+- Branches always "branch off" the current branch - like a tree
+- New branches take current, untracked changes with them
+
 ## Switching between branches
 
 ```bash
-git switch
-# git checkout
+git switch <branch name>
 ```
+
+**Switch from one branch to the other**
+
+- `git switch` is only available since Git v2.23, users with older versions have to use `git checkout`
+- Switchung means, that Git will change the files in your directory: If a file exists only in one branch, then it will only be visible if you are on that branch
+- Switching is only allowed, if changes on the current branch are properly commited
 
 ## Merging branches
 
