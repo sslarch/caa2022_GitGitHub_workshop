@@ -307,6 +307,10 @@ Useful options:
 - `--all`: Add all changes to the staging area
 - `-f`: Force a file to be added that would otherwise be ignored (see below)
 
+## Logging progress: Cleaning the staging area
+
+...
+
 ## Logging progress: The commit
 
 ```bash
@@ -348,7 +352,6 @@ git show <commit>
 git show 15dd154496de68a9d15a4b66282650eed1390974
 git show 15dd # the shortest unique string is enough
 ```
-
 
 ## Deeper inspection: Differences
 
@@ -434,26 +437,51 @@ git switch <branch name>
 - Switchung means, that Git will change the files in your directory: If a file exists only in one branch, then it will only be visible if you are on that branch
 - Switching is only allowed, if changes on the current branch are properly commited
 
+## Cleaning up and unwanted changes
+
+Often we don't want to keep the changes we just made, because they didn't turn out to be useful or were just experiments
+
+```bash
+git reset --hard
+```
+**Reset all modifications in files already tracked by Git**
+
+```bash
+git clean
+```
+
+**Remove newly added files not yet tracked by Git**
+
+- `-d` allows `clean` to also remove entire new directories
+
+Both `reset` and `clean` go back to the state of the current `HEAD`. Running them is irreversible!
+
 ## Merging branches
 
 ```bash
 git merge
 ```
 
-## Cleaning up and unwanted changes
+**Integrate changes from one branch into another branch**
 
-```bash
-git reset
-git clean
+```
+      A---B---C otherBranch
+     /
+D---E---F---G master
 ```
 
-## Cleaning out the staging area
-
-## The woundrous world of stashing
-
 ```bash
-git stash
+git merge otherBranch # run on the master branch
 ```
+
+```
+      A---B---C otherBranch
+     /         \
+D---E---F---G---H master
+```
+
+- Only run `merge` when every change on both branches is committed
+- When changes are contradictory, a **merge conflict** arises. We will talk about this case later
 
 # Beyond that
 
@@ -475,6 +503,12 @@ git push
 git tag
 ```
 
+## Stashing
+
+```bash
+git stash
+```
+
 ## Further obscure commands down the rabbit hole
 
 ```bash
@@ -483,5 +517,6 @@ git rebase
 git range-diff
 git blame
 git cherrypick
+git bisect
 # ...
 ```
