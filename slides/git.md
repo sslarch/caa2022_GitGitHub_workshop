@@ -374,6 +374,8 @@ git diff <commit1> <commit2>
 git revert
 ```
 
+...
+
 # The .gitignore file
 
 ## Ignoring files
@@ -488,6 +490,12 @@ D---E---F---G---H master
 
 - Only run `merge` when every change on both branches is committed
 - When changes are contradictory, a **merge conflict** arises. We will talk about this case later
+
+# Exercise
+
+## Exercise
+
+...
 
 # Beyond
 
