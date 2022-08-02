@@ -240,6 +240,10 @@ Git is not an obscure tool, but a central foundation of modern technology
 
 # Git in action
 
+## Running Git the first time
+
+...
+
 ## Creating a git repository
 
 \small
@@ -309,16 +313,56 @@ Useful options:
 git commit
 ```
 
+**Log a meaningful set of changes**
+
+- `-m "my message"`: Every commit should be described with a clear, concise help message
+- The human component -- you decide how often you commit and how descriptive your commit messages are
+
+Useful options:
+
+- `--amend`: Add sth. or change the previous commit (only use, when you have not pushed!)
+
 ## Deeper inspection: The log
 
 ```bash
 git log
 ```
 
+**See the log of past commits**
+
+```bash
+git show <object>
+```
+
+- Every commit has
+  - A unique identifier, a "hash"
+  - An author
+  - A timestamp
+  - The message
+  - The respective set of changes
+
+**Inspect Git objects, e.g. commits**
+
+```bash
+git show <commit>
+git show 15dd154496de68a9d15a4b66282650eed1390974
+git show 15dd # the shortest unique string is enough
+```
+
+
 ## Deeper inspection: Differences
 
 ```bash
 git diff
+```
+
+**See the concrete changes between two states of the Git project**
+
+- `git diff` shows the current, unstaged changes in relation to the last commit (`HEAD`) on the current branch
+- Can also be used to compare different states:
+
+```bash
+git diff <commit1> <commit2>
 ```
 
 # The .gitignore file
@@ -354,6 +398,8 @@ git merge
 git reset
 git clean
 ```
+
+## Cleaning out the staging area
 
 ## The woundrous world of stashing
 
