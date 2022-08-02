@@ -483,19 +483,23 @@ D---E---F---G---H master
 - Only run `merge` when every change on both branches is committed
 - When changes are contradictory, a **merge conflict** arises. We will talk about this case later
 
-# Beyond that
+# Beyond
 
 ## Working with remotes
 
-Will be covered later
+So far we have focussed on the a local directory, tracked by Git. But Git repositories can also be maintained on a remote server. That is the normal mode of operation for collaborative projects.
+
+Git has multiple subcommands to interact with remotes:
 
 ```bash
-git clone
-git remote
-# git fetch
-git pull
-git push
+git remote # List and modify the remote's URL
+git clone # Download a local copy of a remote repository
+git fetch # Download changes from the remote
+git pull # Download and integrate changes from the remote
+git push # Upload local changes to the remote
 ```
+
+The details of these commands will be covered later
 
 ## Tagging
 
@@ -503,13 +507,41 @@ git push
 git tag
 ```
 
+**Mark a specific point in the history of a repository with a name or number**
+
+- Often used for releases, but also valuable just as orientation points
+- `-a` + `-m`: An annotated tag can be created with: `git tag -a v1.1 -m "Second submission after review"`
+- `-l`: List tags
+- `-d`: Delete a tag
+- Tags can also be inspected: `git show v1.1`
+- `git push` does not push tags, they have to be pushed explicitly with `git push origin v1.1`
+
 ## Stashing
 
 ```bash
 git stash
 ```
 
+**Put away changes to quickly go back to a clean working directory**
+
+A quick-and-dirty way to get to the HEAD without loosing intermediate work (unlike `git reset` and `git clean`)
+
+```bash
+git stash --all # Stash away the current work
+git stash list # List the available stashes
+git stash show # Show changes in the stash
+git stash apply # Bring the changes in the stash back
+```
+
+- `show` and `apply` can also be applied only for specific stashes
+- `git stash` has more subcommands that allow for very precise handling of stashes (not recommended)
+
+
 ## Further obscure commands down the rabbit hole
+
+Git has many more, very specific features, which are not required in daily life, but can feel like a superpower, when properly mastered
+
+Some examples:
 
 ```bash
 git revert
