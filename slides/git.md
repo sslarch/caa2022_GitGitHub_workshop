@@ -368,6 +368,12 @@ git diff
 git diff <commit1> <commit2>
 ```
 
+## Reverting commits
+
+```bash
+git revert
+```
+
 # The .gitignore file
 
 ## Ignoring files
@@ -541,14 +547,20 @@ git stash apply # Bring the changes in the stash back
 
 Git has many more, very specific features, which are not required in daily life, but can feel like a superpower, when properly mastered
 
-Some examples:
+Some examples from rarely used to obscure:
 
+\small
 ```bash
-git revert
-git rebase
-git range-diff
-git blame
-git cherrypick
-git bisect
-# ...
+git blame # Show which line in a file was edited by whom
+git rebase # Moving a sequence of commits to another point
+git range-diff # Show the difference between commit ranges
+git restote # Recover deleted files and directories
+git cherrypick # Reapply the changes of an old commit
+git notes # A system to attach meta-information to changes
+git bisect # Search for the commit that introduced a change
+           # Apparently brilliant for bug-hunting!
+git worktree # Work with multiple worktrees
+             # Multiple branches per repository?!
+...
 ```
+\normalsize
