@@ -369,7 +369,38 @@ git diff <commit1> <commit2>
 
 ## Ignoring files
 
+By adding a (hidden) `.gitignore` file to your repository, you can tell Git to explicitly ignore certain files and directories. This is useful for
+
+- `.log` files
+- large datasets
+- compiled/rendered/calculated output
+- secrets
+
+Make sure never to commit and push secrets (PWs, tokens, etc.) to a Git repository!
+
+```
+myFile.txt    # ignore a specific file
+*.pdf         # ignore all PDFs (with a wildcard *)
+logs/         # ignore a directory
+logs/file.log # ignore a file in a directory
+```
+
+More patterns are available, see e.g. [here](https://www.atlassian.com/git/tutorials/saving-changes/gitignore)
+
 ## Unignoring files
+
+Sometimes we want to ignore a pattern or directory, but not some specific subpatterns, directories or files within it
+
+```
+figures/          # ignore the figures directory
+!figures/fig5.png # ... but track this one figure
+*.pdf             # ignore all PDF files
+!template/*.pdf   # ... but track all PDFs in the template dir
+```
+
+Applying changes to the .gitignore file can be a bit brittle: Sometimes you have to empty the cache for a particular file affected by a change with `git rm --cached <file>`
+
+Instead of unignoring a file in the .gitignore file, we can also add it manually with `git add -f <file>`
 
 # Branches
 
