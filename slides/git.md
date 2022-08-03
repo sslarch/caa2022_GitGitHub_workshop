@@ -242,7 +242,16 @@ Git is not an obscure tool, but a central foundation of modern technology
 
 ## Running Git the first time
 
-...
+```bash
+git config --global user.name "Your name here"
+git config --global user.email "your_email@example.com"
+```
+
+**Set up Git with your identity**
+
+- Especially relevant for later online use
+- `user.name` should not be your GitHub user name, but ideally your real name
+- `user.email` should ideally be the same you used for GitHub
 
 ## Creating a git repository
 
@@ -297,7 +306,7 @@ cat testfile.txt
 \normalsize
 
 ```bash
-git add testfile.txt
+git add <file>
 ```
 
 **Add files to the set of changes prepared for the next commit**
@@ -306,10 +315,6 @@ Useful options:
 
 - `--all`: Add all changes to the staging area
 - `-f`: Force a file to be added that would otherwise be ignored (see below)
-
-## Logging progress: Cleaning the staging area
-
-...
 
 ## Logging progress: The commit
 
@@ -326,7 +331,7 @@ Useful options:
 
 - `--amend`: Add sth. or change the previous commit (only use, when you have not pushed!)
 
-## Deeper inspection: The log
+## Inspection: The log
 
 ```bash
 git log
@@ -353,7 +358,7 @@ git show 15dd154496de68a9d15a4b66282650eed1390974
 git show 15dd # the shortest unique string is enough
 ```
 
-## Deeper inspection: Differences
+## Inspection: Differences
 
 ```bash
 git diff
@@ -368,13 +373,51 @@ git diff
 git diff <commit1> <commit2>
 ```
 
+## Cleaning the staging area
+
+```bash
+git reset
+```
+
+**Remove changes from the staging area**
+
+- Will not change the files, only their status in Git
+- `git reset` sets everything back, but we can also apply this to individual files: `git reset <file>`
+
+
+## Cleaning up unwanted changes
+
+Often we don't want to keep the changes we just made at all, because they didn't turn out to be useful or were just experiments
+
+```bash
+git reset --hard
+```
+**Reset all modifications in files already tracked by Git**
+
+```bash
+git clean
+```
+
+**Remove newly added files not yet tracked by Git**
+
+- `-d` allows `clean` to also remove entire new directories
+
+Both `reset` and `clean` go back to the state of the current `HEAD`. Running them is irreversible!
+
 ## Reverting commits
 
 ```bash
 git revert
 ```
 
-...
+**Create a commit that cancels out previous commits**
+
+```bash
+git revert <commit> # revert one specific commit
+git revert HEAD~3.. # revert the last three commits
+```
+
+- `--no-commit` allows to create the reversing changes without commiting them immediatelly: Gives you more control
 
 # The .gitignore file
 
@@ -442,27 +485,8 @@ git switch <branch name>
 **Switch from one branch to the other**
 
 - `git switch` is only available since Git v2.23, users with older versions have to use `git checkout`
-- Switchung means, that Git will change the files in your directory: If a file exists only in one branch, then it will only be visible if you are on that branch
+- Switching means, that Git will change the files in your directory: If a file exists only in one branch, then it will only be visible if you are on that branch
 - Switching is only allowed, if changes on the current branch are properly commited
-
-## Cleaning up and unwanted changes
-
-Often we don't want to keep the changes we just made, because they didn't turn out to be useful or were just experiments
-
-```bash
-git reset --hard
-```
-**Reset all modifications in files already tracked by Git**
-
-```bash
-git clean
-```
-
-**Remove newly added files not yet tracked by Git**
-
-- `-d` allows `clean` to also remove entire new directories
-
-Both `reset` and `clean` go back to the state of the current `HEAD`. Running them is irreversible!
 
 ## Merging branches
 
