@@ -419,6 +419,13 @@ git revert HEAD~3.. # revert the last three commits
 
 - `--no-commit` allows to create the reversing changes without commiting them immediatelly: Gives you more control
 
+## Exercise 1
+
+1. Create a new directory and initialize it for Git
+2. Add a new text file "pet.txt" with the name of your favourite animal
+3. Add this file to the staging area
+4. Commit the change with a meaningful commit message
+
 # The .gitignore file
 
 ## Ignoring files
@@ -460,7 +467,7 @@ Instead of unignoring a file in the .gitignore file, we can also add it manually
 
 ## Creating a new branch
 
-Branches allow you, to explore something off the main track. This is useful for
+Branches allow you, to work off the main track. This is useful for
 
 - Experiments and breaking changes
 - Collaborative work: Suggesting changes
@@ -515,11 +522,15 @@ D---E---F---G---H master
 - Only run `merge` when every change on both branches is committed
 - When changes are contradictory, a **merge conflict** arises. We will talk about this case later
 
-# Exercise
+## Exercise 2
 
-## Exercise
-
-...
+1. Go back to your toy project from Exercise 1
+2. Create a new branch named `eyeBranch`
+3. Switch to this new branch
+4. Edit `pet.txt` and add the number of eyes of this animal in another line (e.g. `2`)
+5. Create a commit for this change
+6. Switch back to the master branch
+7. Merge `eyeBranch` into the `master` branch
 
 # Beyond
 
