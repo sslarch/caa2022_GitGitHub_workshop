@@ -15,6 +15,10 @@ theme: "Singapore"
   - interact with other users
 - or simply back up your stuff remotely
 
+## Collaboration
+
+![](./images/github_friends_smaller.png)
+
 ## Your github repository
 
 - has a name (github.com/yourname/yourrepo)
