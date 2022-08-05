@@ -63,7 +63,7 @@ git clone "github.com/yourname/yourrepo"
 
 - now change / add / commit as you want
 
-## Authentification with SSH
+## Authentification with SSH (Part I)
 
 1. Test your SSH connection, see also [GitHub Docu](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)
 
@@ -76,6 +76,8 @@ git clone "github.com/yourname/yourrepo"
 - follow the steps in "Generating a new SSH key"
 - follow the steps in "Adding your SSH key to the ssh-agent"
 - add the SSH key to you account on GitHub
+
+## Authentification with SSH (Part II)
 
 3. Add a new SSH key to your GitHub account, see also [GitHub Docu](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 
