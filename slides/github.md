@@ -79,7 +79,7 @@ Follow if you are fast enough, otherwise there will be time later!
 3. Adding a new SSH key to your GitHub account [[GitHub Docu]](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 4. Testing your SSH connection (step 1)
 
-### Testing your SSH connection
+## Testing your SSH connection
 
 ```bash
 ssh -T git@github.com # Attempts to ssh to GitHub
@@ -87,11 +87,12 @@ ssh -T git@github.com # Attempts to ssh to GitHub
 
 ```bash
 # it worked!
-> The authenticity of host 'github.com (IP ADDRESS)' can't be established.
-> RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+> The authenticity of host 'github.com (IP ADDRESS)' 
+> can\'t be established. RSA key fingerprint is 
+> SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
 > Are you sure you want to continue connecting (yes/no)?
-> Hi username! You've successfully authenticated, but GitHub does not
-> provide shell access.
+> Hi username! You\'ve successfully authenticated, 
+> but GitHub does not provide shell access.
 ```
 
 ```bash
@@ -99,28 +100,30 @@ ssh -T git@github.com # Attempts to ssh to GitHub
 > Permission denied (publickey).
 ```
 
-### Generating a new SSH key
+## Generating a new SSH key
 
 ```bash
-ssh-keygen -t ed25519 -C "your_email@example.com" # use your GitHub Email
+ssh-keygen -t ed25519 -C "your_email@example.com" 
+# use your GitHub Email
 > Generating public/private algorithm key pair.
-> Enter a file in which to save the key (/c/Users/you/.ssh/id_algorithm): # press enter
-> Enter passphrase (empty for no passphrase): # type a passphrase
-> Enter same passphrase again: # type passphrase again
+> Enter a file in which to save the key 
+> (/c/Users/you/.ssh/id_algorithm): # press enter
+> Enter passphrase (empty for no passphrase): # type a pw
+> Enter same passphrase again: # type pw again
 ```
 
-### Adding a new SSH key to your GitHub account
+**Adding a new SSH key to your GitHub account**
 
 ```bash
 clip < ~/.ssh/id_ed25519.pub #copies key to your clipboard
 ```
 
-### Go to GitHub online (Part 1)
+## Go to GitHub online (Part 1)
 
 In the upper-right corner of any page, click your profile photo, then click Settings.
 ![](./images/userbar-account-settings.png)
 
-### Go to GitHub online (Part 2)
+## Go to GitHub online (Part 2)
 
 In the "Access" section of the sidebar, click "SSH and GPG keys".
 Click New SSH key or Add SSH key.
@@ -129,13 +132,15 @@ Click New SSH key or Add SSH key.
 
 In the "Title" field, add a descriptive label for the new key. For example, if you're using a personal Mac, you might call this key "Personal MacBook Air".
 
-Paste your key into the "Key" field.
+
+## Go to GitHub online (Part 3)
+
+Paste your key into the "Key" field, then click "Add SSH key".
 
 ![](./images/ssh-key-paste.png)
 
-Click Add SSH key.
 
-### Testing your SSH connection
+## Testing your SSH connection
 
 ```bash
 ssh -T git@github.com # Attempts to ssh to GitHub
@@ -143,11 +148,12 @@ ssh -T git@github.com # Attempts to ssh to GitHub
 
 ```bash
 # it worked!
-> The authenticity of host 'github.com (IP ADDRESS)' can't be established.
-> RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+> The authenticity of host 'github.com (IP ADDRESS)' 
+> can\'t be established. RSA key fingerprint is 
+> SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
 > Are you sure you want to continue connecting (yes/no)?
-> Hi username! You've successfully authenticated, but GitHub does not
-> provide shell access.
+> Hi username! You\'ve successfully authenticated, 
+> but GitHub does not provide shell access.
 ```
 
 ## Let's check: Does this work for all of you?
