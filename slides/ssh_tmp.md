@@ -1,8 +1,8 @@
 ## Authentification with SSH
 
-1. Testing your SSH connection [GitHub Docu](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)
-2. Generate a new SSH Key [GitHub Docu](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-3. Adding a new SSH key to your GitHub account [GitHub Docu](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+1. Testing your SSH connection [[GitHub Docu]](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)
+2. Generate a new SSH Key [[GitHub Docu]](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+3. Adding a new SSH key to your GitHub account [[GitHub Docu]](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 4. Testing your SSH connection (step 1)
 
 ### Testing your SSH connection
