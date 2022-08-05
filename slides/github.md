@@ -1,6 +1,6 @@
 ---
 title: "Github"
-author: "Sophie C. Schmidt"
+author: "Sophie C. Schmidt, Florian Thiery"
 theme: "Singapore"
 ---
 # Github
