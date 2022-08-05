@@ -6,7 +6,9 @@ theme: "Singapore"
 # Github
 
 ## What is Github?
+::: columns
 
+:::: column
 - "a code hosting platform for version control and collaboration"
 - a remote git repository, where you can
   - work collaboratively
@@ -15,14 +17,23 @@ theme: "Singapore"
   - interact with other users
 - or simply back up your stuff remotely
 
-![](https://github.githubassets.com/images/modules/logos_page/Octocat.png)
+::::
+
+:::: column
+
+![](./images/Octocat.png)
+
+::::
+
+:::
 
 ## Collaboration
 
 ![](./images/github_friends_smaller.png)
 
-## Your github repository
+# Github repository
 
+## Your Github repository
 - has a name (github.com/yourname/yourrepo)
 - settings:
   - private or public
@@ -33,7 +44,7 @@ theme: "Singapore"
   - add a gitignore?
   - choose a license
 
-## short excursion: **README**
+## Short excursion: **README**
 
 What is a README.md?
 
@@ -52,7 +63,12 @@ What is a README.md?
   - how to contribute
   - how to cite
 
+## Let me show you
+
+Follow if you are fast enough, otherwise there will be time later!
 <!-- Sophie shows how to create a new github project -->
+
+# Connecting to Github
 
 ## Authentification with SSH (Part I)
 <!-- Florian takes over -->
@@ -86,7 +102,9 @@ What is a README.md?
 
 ## Let's check: Does this work for all of you?
 
-## connecting remote and local repos
+# Workflow
+
+## Connecting remote and local repos
 
 - easiest way: *clone* the github repository to your own computer
 - = download the folder that is your repository
@@ -102,73 +120,136 @@ git clone "github.com/yourname/yourrepo"
 - now change / add / commit as you want
 - your local repo then has an "origin", which is the remote github repo from where you cloned
 
-## synchronise your local and remote repos
+## Synchronise your local and remote repos
 
 - we want to synchronise them, so they have the same commit history
-  - *push*: uploades changes *to* remote
-  - *pull*: downloads (`git fetch`) and merges (`git merge`) changes *from* the remote in one go
+  - **push**: uploades changes **to** remote
+  - **pull**: downloads (`git fetch`) and merges (`git merge`) changes **from** the remote in one go
   - ONLY commited changes get copied
 
 - `git clone`: needs to be done once
 - `git pull`: anytime something in the remote has been changed
 
-## synchronise your local and remote branches
+## Synchronise your local and remote branches
 
 - pull and push can be done with specific branches 
 ```
 git push origin main # pushes main branch to remote's main
 ```
-same structure:
+- same structure for other branches:
 
 ```
 git pull <branch_remote> <branch_local> 
 ```
 
+## Push doesn't work?  
+
+```
+(base) sophie@idhrenisle:
+~/R/caa2022_GitGitHub_workshop/slides
+$ git push origin main            
+To github.com:sslarch/caa2022_GitGitHub_workshop.git          
+! [rejected]    main -> main (fetch first)    
+``` 
+--> solution: pull! 
+
+```
+(base) sophie@idhrenisle:
+~/R/caa2022_GitGitHub_workshop/slides
+$ git pull origin main 
+```...
+```
+Von github.com:sslarch/caa2022_GitGitHub_workshop            
+ * branch            main       -> FETCH_HEAD                
+   89c51f9..05066e5  main       -> origin/main                
+Merge made by the 'recursive' strategy.
+```
+- and now push again. :-) 
+
+## If Merge doesn't work?  
+
 - if you pull sth that can't be merged automatically
+  - DON'T PANIC
+
+In the file you will find "conflict markers":
+- `<<<<<<<HEAD.`:  beginning of the conflict, now you version of the text is shown
+- `======= `:  divides your version from the changes in the other branch
+- `>>>>>>> BRANCH-NAME` : end of the problem with the name of the "rival" branch
+
+## Merge conflict example
+
+- one person wrote "open an issue" in the base or HEAD branch
+- another person wrote "ask your question in IRC" in the compare branch or branch-a.
+- both the same line --> git doesn't know which to save
+
+```
+If you have questions, please
+<<<<<<< HEAD
+open an issue
+=======
+ask your question in IRC.
+>>>>>>> branch-a
+``` 
+## Merge conflict solution
+
+- easy way:
   - amend the affected lines by hand
-  - nothing gets overwritten by accident!
+  - delete the conflict markers
+  - save
+  - git add
+  - git commit
   
-## Merge conflict  
+- nothing gets overwritten by accident!
 
-  <!--- to do --->
-
-  
 ## Visualisation of Workflow
 
 ![](https://dev.vividbreeze.com/wp-content/uploads/2018/03/gitBasicsRemote.jpg)
 
-<!--- show these steps --->
+<!--- show these steps 
+1. create github repository
+2. clone it
+3. change readme
+4. add and commit
+5. push
+--->
 
-# Let's do this
+# Excercise 
 
 <!--- workshop content --->
-## Create Github repository
+## Create and use your Github repository
 
+::: columns
+
+:::: column
 - open Github and log in
 - create a new repository
   - make it public
   - initialize with a README
   - add a gitignore
 - now:
+
 ``` bash
 cd /path/to/where/you/want/it
 git clone "github.com/yourname/yourrepo"
 ```
+::::
 
-## Change things
-
-<!--- workshop content --->
-
+:::: column
 - open the README.md
 - write a couple of words
 - git add
 - git commit
 - git push
 
+::::
+
+:::
+
+
+
 **Well done!**
 
-# Working together
-
+# Collaborating
 
 ## Issues: Github's space for discussions 
 
@@ -181,7 +262,7 @@ git clone "github.com/yourname/yourrepo"
 - *close* them when done discussing!
 
 
-## Collaborating: Github's infrastructure
+## Pull requests: Github's infrastructure for collaboration
 
 - public repositories can be *forked* by anybody
   - = make a copy to your own profile
@@ -194,11 +275,14 @@ git clone "github.com/yourname/yourrepo"
 
 <!--- show and tell with 1 partner: https://github.com/florianthiery/testrepo --->
 
-# Let's do this! 
+# Excercise 
+
+## Collaborating with a partner
+
 <!--- workshop content --->
 
 - take a partner
-- exchange URLs to your repositories
+- exchange URLs of your repositories
 - fork the repo of your partner
 - clone it to your computer
 - add a sentence to his readme
