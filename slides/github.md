@@ -57,6 +57,8 @@ git clone "github.com/yourname/yourrepo"
 - -> creates new git-repository /path/to/where/you/want/it/yourrepo
 - now change / add / commit as you want
 
+## Authentification
+
 ## synchronise your local and remote repos
 
 - we want to synchronise them, so they have the same commit history
