@@ -390,9 +390,13 @@ git reset
 Often we don't want to keep the changes we just made at all, because they didn't turn out to be useful or were just experiments
 
 ```bash
-git reset --hard
+git reset --hard # set all files back
+git restore <file> # set one file back
 ```
+
 **Reset all modifications in files already tracked by Git**
+
+- `git restore` is only available since Git v2.23, users with older versions have to use `git checkout`
 
 ```bash
 git clean
@@ -597,7 +601,6 @@ Some examples from rarely used to obscure:
 git blame # Show which line in a file was edited by whom
 git rebase # Moving a sequence of commits to another point
 git range-diff # Show the difference between commit ranges
-git restote # Recover deleted files and directories
 git cherrypick # Reapply the changes of an old commit
 git notes # A system to attach meta-information to changes
 git bisect # Search for the commit that introduced a change
