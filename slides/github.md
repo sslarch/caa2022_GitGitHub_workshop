@@ -57,7 +57,32 @@ git clone "github.com/yourname/yourrepo"
 - -> creates new git-repository /path/to/where/you/want/it/yourrepo
 - now change / add / commit as you want
 
-## Authentification
+## Authentification with SSH
+
+1. Test your SSH connection, see also [GitHub Docu](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)
+
+- enter `$ ssh -T git@github.com`
+- if you see "Hi username! You've successfully authenticated ..." everything is fine
+- if you see "Error: Permission denied (publickey)" you have to generate a new SSH Key
+
+2. Generate a new SSH Key, see also [GitHub Docu](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+- follow the steps in "Generating a new SSH key"
+- follow the steps in "Adding your SSH key to the ssh-agent"
+- add the SSH key to you account on GitHub
+
+3. Add a new SSH key to your GitHub account, see also [GitHub Docu](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+
+- check if steps 1 and 2 are done
+- follow the steps in "Adding a new SSH key to your account"
+
+4. Test your SSH connection again (step 1)
+
+- you should see "Hi username! You've successfully authenticated ..."
+- finished! Your device is now connected via your accout to GitHub.
+- test to clone a repository in git bash vis SSH
+- `$ git clone git@github.com:username/repo.git`
+- modifiy the repo files and push it back
 
 ## synchronise your local and remote repos
 
