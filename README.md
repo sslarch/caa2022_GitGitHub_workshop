@@ -4,6 +4,8 @@ This workshop by the [CAA–SIG Scientific Scripting Languages in Archaeology](h
 
 The slides are available as .pdf in [`rendered_slides`](rendered_slides).
 
+Some images were taken from the beautiful [Github Series](https://github.com/allisonhorst/stats-illustrations/tree/main/github-illustrated-series) by [Allison Horst](https://github.com/allisonhorst/).  
+
 ## What this workshop covers
 
 In this workshop we will demonstrate how archaeologists can concretely profit from code sharing platforms and version control software, guide the participants to navigate these digital spaces and tools confidently, and showcase how they can streamline and improve common (research) tasks. We will give a practical introduction to some of the most popular systems: Git, a powerful command line software handling and documenting changes in (text)files, and the platform GitHub, where projects can be stored and shared online.
