@@ -15,6 +15,10 @@ theme: "Singapore"
   - interact with other users
 - or simply back up your stuff remotely
 
+## Collaboration
+
+![](./images/github_friends_smaller.png)
+
 ## Your github repository
 
 - has a name (github.com/yourname/yourrepo)
@@ -38,8 +42,9 @@ What is a README.md?
   - asterisk (\*) to make things italic: \*italic\*: *italic*
 - README
   - a file that gets displayed first in the repo
-  - explains what it is about
-  - how to use the code (from data, workflows, to licenses...)
+  - project title
+  - description
+  - how to use the code (from data, workflows,... to licenses)
   - how to contribute
   - how to cite
 
@@ -54,7 +59,8 @@ cd /path/to/where/you/want/it
 git clone "github.com/yourname/yourrepo"
 ```
 
-- -> creates new git-repository /path/to/where/you/want/it/yourrepo
+--> creates new git-repository /path/to/where/you/want/it/yourrepo
+
 - now change / add / commit as you want
 
 ## Authentification with SSH
