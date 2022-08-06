@@ -205,6 +205,10 @@ Git handles text, code and (small) datasets
 
 :::
 
+## Version control
+
+![Git helps to streamline your work (© Allison Horst and Julie Lowndes)](images/github_compare_text.png){ width=100% }
+
 ## Git: Mechanism and terminology
 
 Git maintains a hidden directory (`.git)` in your project directory, which documents the history and state of your project
