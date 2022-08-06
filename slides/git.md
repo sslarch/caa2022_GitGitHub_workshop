@@ -467,7 +467,7 @@ Sometimes we want to ignore a pattern or directory, but not some specific subpat
 figures/          # ignore the figures directory
 !figures/fig5.png # ... but track this one figure
 *.pdf             # ignore all PDF files
-!template/*.pdf   # ... but track all PDFs in the template dir
+!template/*.pdf   # ... but track all PDFs in this dir
 ```
 
 Applying changes to the .gitignore file can be a bit brittle: Sometimes you have to empty the cache for a particular file affected by a change with `git rm --cached <file>`
