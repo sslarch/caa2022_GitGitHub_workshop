@@ -261,6 +261,9 @@ git config --global user.email "your_email@example.com"
 
 \small
 ```bash
+cd c: # windows only
+mkdir git
+cd git
 mkdir myProject
 cd myProject
 ```
@@ -290,7 +293,7 @@ On branch master
 
 No commits yet
 
-nothing to commit (create/copy files and use "git add" to track)
+nothing to commit
 ```
 
 - We're on the master branch
