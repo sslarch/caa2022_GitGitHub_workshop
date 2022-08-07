@@ -229,7 +229,7 @@ Merge made by the 'recursive' strategy.
 
 In the file you will find "conflict markers":
 
-- `<<<<<<<HEAD.`:  beginning of the conflict, now you version of the text is shown
+- `<<<<<<<HEAD.`:  beginning of the conflict, now your version of the text is shown
 
 - `======= `:  divides your version from the changes in the other branch
 
