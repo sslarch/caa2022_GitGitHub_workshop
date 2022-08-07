@@ -14,6 +14,7 @@ theme: "Singapore"
   - how do I get code examples?
   - how did they do that exactly?
   - what do I need to be able to try that analysis?
+  - Help, I'm stuck!
 
 - that's why we founded the SIG SSLA
 
@@ -62,7 +63,7 @@ it's not just us:
 ## Twitter
 
 - hashtags like #Rstats, #Python, #ComputationalArchaeology, #DigitalArchaeology
-- CAA chapters @CAADE5, CAA_Australasia, @caanlfl) and international CAA (@CAA_Int)
+- CAA chapters (@CAADE5, @CAA_Australasia, @caanlfl) and international CAA (@CAA_Int)
 - SIGs (SIG-SSLA: @CAA_SSLA, SIG Data Dragons: @CAADataDragon)
 - other networks (@DigArchGroup, @Rchaeology1)
 - archaepapers with code bot by Ben Marwick (@archpaperscode)
@@ -79,13 +80,27 @@ it's not just us:
 
 --> less discussion, more easy attainable information
 
-## Github / Gitlab
+## Github
+::: columns
+
+:::: column
+
+- many different resources
 - Ben Marwicks CTV: [https://github.com/benmarwick/ctv-archaeology](https://github.com/benmarwick/ctv-archaeology) 
 - github.io --> Books / Tutorials (e.g. [https://benmarwick.github.io/How-To-Do-Archaeological-Science-Using-R/](https://benmarwick.github.io/How-To-Do-Archaeological-Science-Using-R/))
-- a number of packages / extensions for R, QGIS, Python...
 
---> commenting and working together
+--> repository of code --> plugins, packages, extensions, ...
 
---> sharing of scripts / developmened solutions / packages
+--> used for commenting and working together
+:::: 
+:::: column
+- [study by Batiste/Roe 2021](https://github.com/zackbatist/caa2021-openarchaeo/): Github by far the most used repository for archaeological free and open source software:
 
-- **this is what this workshop will be about**
+![](./images/RoeBatiste_repo-hosts.png)
+
+::::
+
+:::
+
+
+**this is what this workshop will be about**

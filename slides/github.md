@@ -228,8 +228,11 @@ Merge made by the 'recursive' strategy.
   - DON'T PANIC
 
 In the file you will find "conflict markers":
+
 - `<<<<<<<HEAD.`:  beginning of the conflict, now you version of the text is shown
+
 - `======= `:  divides your version from the changes in the other branch
+
 - `>>>>>>> BRANCH-NAME` : end of the problem with the name of the "rival" branch
 
 ## Merge conflict example
@@ -292,7 +295,7 @@ git clone "github.com/yourname/yourrepo"
 
 :::: column
 - open the README.md
-- write a couple of words
+- write a couple of words (use `echo`, nano or your own text editor)
 - git add
 - git commit
 - git push
@@ -341,10 +344,10 @@ git clone "github.com/yourname/yourrepo"
 - exchange URLs of your repositories
 - fork the repo of your partner
 - clone it to your computer
-- add a sentence to his readme
+- add a sentence to his README
 - git add, commit, push
 - create a pull request
 
 - partner merges
 
-**Wow!**
+
