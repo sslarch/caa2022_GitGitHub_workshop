@@ -104,3 +104,12 @@ it's not just us:
 
 
 **this is what this workshop will be about**
+
+## Plan
+
+- Working locally
+    - bash
+    - git
+- Working remotely
+    - Github
+    - collaborating with others
