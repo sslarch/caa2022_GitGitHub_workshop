@@ -19,7 +19,7 @@ Each operating sytem offers different shells and terminal emulators
 - Linux shells: sh, bash, ksh, zsh, ...
 - Linux terminal emulators: XFCE/GNOME terminal, Konsole, alacritty, kitty, terminator, ...
 
-Windows users in this workshop should use the Git BASH, which simulates a \*nix environment
+Windows users in this workshop should use the Git BASH, which simulates a Linux environment. Please use "Run as an administrator" (apparently necessary)
 
 ## Navigating
 
@@ -257,7 +257,7 @@ git config --global user.email "your_email@example.com"
 - `user.name` should not be your GitHub user name, but ideally your real name
 - `user.email` should ideally be the same you used for GitHub
 
-## Creating a git repository
+## Creating a Git repository
 
 \small
 ```bash
@@ -432,10 +432,13 @@ git revert HEAD~3.. # revert the last three commits
 
 ## Exercise 1
 
-1. Create a new directory and initialize it for Git
-2. Add a new text file "pet.txt" with the name of your favourite animal
-3. Add this file to the staging area
-4. Commit the change with a meaningful commit message
+1. Create a new directory (not in your current one, if it is tracked by Git!)
+2. Change into it and initialize it for Git
+3. Add a new text file "pet.txt" with the name of your favourite animal
+4. Add this file to the staging area
+5. Commit the change with a meaningful commit message
+
+`mkdir`, `cd`, `git init`, `echo "dog" > pet.txt`, `git add --all`, `git commit -m "pet!"`
 
 # The .gitignore file
 
