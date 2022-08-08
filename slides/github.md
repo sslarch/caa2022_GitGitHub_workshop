@@ -112,6 +112,15 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 > Enter same passphrase again: # type pw again
 ```
 
+## Adding your SSH key to the SSH Agent
+
+```bash
+eval "$(ssh-agent -s)"
+# start the ssh-agent in the background
+ssh-add ~/.ssh/id_ed25519
+# add your SSH private key to the ssh-agent
+```
+
 **Adding a new SSH key to your GitHub account**
 
 ```bash
