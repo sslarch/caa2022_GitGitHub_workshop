@@ -177,7 +177,7 @@ ssh -T git@github.com # Attempts to ssh to GitHub
 - use :
 ``` bash
 cd /path/to/where/you/want/it
-git clone "github.com/yourname/yourrepo"
+git clone git@github.com:yourname/yourrepo.git
 ```
 
 --> creates new git-repository /path/to/where/you/want/it/yourrepo
@@ -298,7 +298,7 @@ ask your question in IRC.
 
 ``` bash
 cd /path/to/where/you/want/it
-git clone "github.com/yourname/yourrepo"
+git clone git@github.com:yourname/yourrepo.git
 ```
 ::::
 
@@ -359,4 +359,12 @@ git clone "github.com/yourname/yourrepo"
 
 - partner merges
 
+## And now?
 
+- your partner change something remotely in your repository!
+- you need to pull the change 
+
+```
+cd /your/repo
+git pull
+``` 
